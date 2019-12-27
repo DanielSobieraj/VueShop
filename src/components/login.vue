@@ -1,35 +1,39 @@
 <template>
-    <v-app>
-        <v-card width="400" class="mx-auto mt-5">
-            <v-card-title>
-                <h1>Login</h1>
-            </v-card-title>
-            <v-card-text>
-                <v-form>
-                    <v-text-field
-                            label="E-Mail"
-                            prepend-icon="mdi-account-circle"
-                            v-model="email"
-                    />
-                    <v-text-field
-                            :type="showPassword ? 'text' : 'password'"
-                            label="Password"
-                            prepend-icon="mdi-lock"
-                            :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
-                            @click:append="showPassword = !showPassword"
-                            v-model="password"
-                    />
-                </v-form>
-            </v-card-text>
-            <v-divider></v-divider>
-            <v-card-actions>
-                <v-btn color="success"
-                to="/register">Register</v-btn>
-                <v-btn color="info"
-                @click="login">Login</v-btn>
-            </v-card-actions>
-        </v-card>
-    </v-app>
+    <v-container fill-height>
+        <v-layout align-center>
+            <v-card class="mx-auto mt-5" width="400">
+                <v-card-title>
+                    <h1>Login</h1>
+                </v-card-title>
+                <v-card-text>
+                    <v-form>
+                        <v-text-field
+                                label="E-Mail"
+                                prepend-icon="mdi-account-circle"
+                                v-model="email"
+                        />
+                        <v-text-field
+                                :append-icon="showPassword ? 'mdi-eye' : 'mdi-eye-off'"
+                                :type="showPassword ? 'text' : 'password'"
+                                @click:append="showPassword = !showPassword"
+                                label="Password"
+                                prepend-icon="mdi-lock"
+                                v-model="password"
+                        />
+                    </v-form>
+                </v-card-text>
+                <v-divider/>
+                <v-card-actions>
+                    <v-btn color="success"
+                           to="/register">Register
+                    </v-btn>
+                    <v-btn @click="login"
+                           color="info">Login
+                    </v-btn>
+                </v-card-actions>
+            </v-card>
+        </v-layout>
+    </v-container>
 </template>
 
 <script>

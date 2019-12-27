@@ -1,5 +1,8 @@
 <template>
-    <p>aa</p>
+    <v-container fill-height>
+        <v-layout align-center>
+        </v-layout>
+    </v-container>
 </template>
 
 <script>
