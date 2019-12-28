@@ -5,7 +5,13 @@
 //     databaseURL: "https://uczelnia-bbbc6.firebaseio.com",
 //     projectId: "uczelnia-bbbc6",
 //     storageBucket: "uczelnia-bbbc6.appspot.com",
-//     messagingSenderId: "531838899222",
+//     messagingSenderId: "531838899222"
 // };
 //
 // firebase.initializeApp(firebaseConfig);
+//
+//
+//
+//
+//
+//

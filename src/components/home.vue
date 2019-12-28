@@ -6,10 +6,20 @@
 </template>
 
 <script>
-    // import db from "./firebaseConfig";
+    import {db} from '../main'
 
     export default {
         name: "home",
+        data() {
+            return {
+                products: []
+            }
+        },
+        firestore() {
+            return {
+                products: db.collection("products")
+            }
+        }
     };
 </script>
 

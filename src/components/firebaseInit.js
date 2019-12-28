@@ -2,4 +2,4 @@
 // import firebaseConfig from './firebaseConfig'
 //
 //
-// export default firebaseApp.firestore()
+// export default fnpm install firebase vuefireirebaseApp.firestore()

@@ -2,10 +2,10 @@ import Vue from "vue";
 import App from "./App.vue";
 import vuetify from "./plugins/vuetify";
 import router from "./router";
+import firebase from 'firebase/app'
+import 'firebase/firestore'
 
 Vue.config.productionTip = false;
-
-import firebase from "firebase";
 
 firebase.initializeApp({
   apiKey: "AIzaSyBLiVXnJyj5MP_LfRIp_d9JF_0ufKQEa8Q",
@@ -27,6 +27,9 @@ firebase.auth().onAuthStateChanged(() => {
     }).$mount('#app');
   }
 });
+
+export const db = firebase.firestore();
+
 
 // new Vue({
 //   vuetify,

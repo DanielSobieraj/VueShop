@@ -111,6 +111,47 @@
                         </v-list-item-content>
                     </v-list-item>
 
+                    <v-divider></v-divider>
+
+                    <v-list-item
+                            link
+                    >
+                        <v-list-item-icon>
+                            <v-icon>add</v-icon>
+                        </v-list-item-icon>
+
+                        <v-list-item-content>
+                            <v-list-item-title>Add product</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+
+                    <v-list-item
+                            link
+                    >
+                        <v-list-item-icon>
+                            <v-icon>remove</v-icon>
+                        </v-list-item-icon>
+
+                        <v-list-item-content>
+                            <v-list-item-title>Remove product</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+
+                    <v-list-item
+                            link
+                    >
+                        <v-list-item-icon>
+                            <v-icon>edit</v-icon>
+                        </v-list-item-icon>
+
+                        <v-list-item-content>
+                            <v-list-item-title>Edit product</v-list-item-title>
+                        </v-list-item-content>
+                    </v-list-item>
+
+
+                    <v-divider></v-divider>
+
                     <v-list-item
                             @click="logout"
                             link
