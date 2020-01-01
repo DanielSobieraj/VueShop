@@ -19,6 +19,7 @@
                 <v-btn
                         text
                         to="/home"
+
                 >VueShop
                 </v-btn>
             </v-toolbar-title>
