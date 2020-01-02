@@ -28,6 +28,7 @@
 
             <v-toolbar-items>
                 <v-btn text
+                       @click.stop="searchIcon = !searchIcon"
                 >
                     <i class="material-icons">
                         search
@@ -96,7 +97,7 @@
                         </v-list-item-icon>
 
                         <v-list-item-content>
-                            <v-list-item-title>Cart</v-list-item-title>
+                            <v-list-item-title>Shopping cart</v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
 
@@ -116,6 +117,7 @@
 
                     <v-list-item
                             link
+                            to="/addProduct"
                     >
                         <v-list-item-icon>
                             <v-icon>add</v-icon>
@@ -128,6 +130,7 @@
 
                     <v-list-item
                             link
+                            to="/removeProduct"
                     >
                         <v-list-item-icon>
                             <v-icon>remove</v-icon>
@@ -140,6 +143,7 @@
 
                     <v-list-item
                             link
+                            to="/editProduct"
                     >
                         <v-list-item-icon>
                             <v-icon>edit</v-icon>
@@ -173,7 +177,6 @@
 </template>
 
 <script>
-
     import firebase from 'firebase';
 
     export default {
@@ -181,7 +184,8 @@
         data() {
             return {
                 user: '',
-                drawer: null
+                drawer: null,
+                searchIcon: null
             };
         },
         methods: {
