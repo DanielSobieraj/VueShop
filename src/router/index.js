@@ -6,7 +6,7 @@ import login from "../components/login";
 import register from "../components/register";
 import addProduct from "../components/addProduct";
 import editProduct from "../components/editProduct";
-import removeProduct from "../components/removeProduct";
+import deleteProduct from "../components/deleteProduct";
 
 Vue.use(Router);
 
@@ -47,9 +47,9 @@ const router = new Router({
       component: editProduct
     },
     {
-      path: "/removeproduct",
-      name: "removeProduct",
-      component: removeProduct
+      path: "deleteproduct",
+      name: "deleteProduct",
+      component: deleteProduct
     }
   ]
 });
