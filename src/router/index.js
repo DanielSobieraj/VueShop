@@ -47,7 +47,7 @@ const router = new Router({
       component: editProduct
     },
     {
-      path: "deleteproduct",
+      path: "/deleteProduct",
       name: "deleteProduct",
       component: deleteProduct
     }

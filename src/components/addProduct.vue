@@ -1,5 +1,5 @@
 <template>
-    <v-form v-model="valid">
+    <v-form>
         <v-container>
             <v-row justify="center">
                 <v-col class="text-center" cols="12">
@@ -9,12 +9,6 @@
                         cols="10"
                         md="7"
                 >
-                    <v-text-field
-                            label="Product ID"
-                            required
-                            type="number"
-                            v-model="firstname"
-                    ></v-text-field>
                 </v-col>
 
                 <v-col
@@ -23,20 +17,19 @@
                 >
                     <v-text-field
                             label="Name"
-                            required
-                            v-model="firstname"
-                    ></v-text-field>
+                            v-model="name"
+                    />
                 </v-col>
 
                 <v-col
                         cols="10"
                         md="7"
                 >
-                    <v-text-field
+                    <v-select
+                            :items="brand"
                             label="Brand"
-                            required
-                            v-model="lastname"
-                    ></v-text-field>
+                            v-model="selectedBrand"
+                    />
                 </v-col>
 
                 <v-col
@@ -45,9 +38,8 @@
                 >
                     <v-textarea
                             label="Description"
-                            required
-                            v-model="email"
-                    ></v-textarea>
+                            v-model="description"
+                    />
                 </v-col>
 
                 <v-col
@@ -57,20 +49,19 @@
                     <v-text-field
                             label="Price"
                             prefix="PLN"
-                            required
                             type="number"
-                            v-model="a"
-                    ></v-text-field>
+                            v-model="price"
+                    />
                 </v-col>
                 <v-col
                         cols="10"
                         md="7"
                 >
-                    <v-text-field
+                    <v-select
+                            :items="category"
                             label="Category"
-                            required
-                            v-model="email"
-                    ></v-text-field>
+                            v-model="selectedCategory"
+                    />
                 </v-col>
                 <v-col
                         cols="10"
@@ -78,23 +69,73 @@
                 >
                     <v-text-field
                             label="Image URL"
-                            required
-                            v-model="email"
-                    ></v-text-field>
+                            v-model="image_url"
+                    />
                 </v-col>
                 <v-col class="text-center" cols="12">
                     <v-btn
-                            color="info">Add product
+                            @click="addProduct"
+                            color="green"
+                            dark
+                            type="submit"
+                    >Add product
                     </v-btn>
                 </v-col>
+                <v-alert
+                        dense
+                        text
+                        type="error"
+                        v-if="showError">
+                    Error!
+                </v-alert>
+                <v-alert
+                        dense
+                        text
+                        type="success"
+                        v-if="showSuccess">
+                    Product was added
+                </v-alert>
             </v-row>
         </v-container>
     </v-form>
 </template>
 
 <script>
+    import db from '../api/firebaseInit'
+
     export default {
-        name: "addProduct"
+        name: "addProduct",
+        data() {
+            return {
+                name: '',
+                brand: ['Soft99', 'Collinite', 'Shiny Garage'],
+                description: '',
+                price: null,
+                category: ['Wax', 'Shampoo', 'Towel', 'Quick detailer', 'Bucket'],
+                image_url: '',
+                selectedCategory: '',
+                selectedBrand: '',
+                showSuccess: null,
+                showError: null
+            }
+        },
+        methods: {
+            addProduct() {
+                db.collection("products").doc().set({
+                    name: this.name,
+                    brand: this.selectedBrand,
+                    description: this.description,
+                    price: this.price,
+                    category: this.selectedCategory,
+                    image_url: this.image_url
+                }).then(() => {
+                        this.showSuccess = true;
+                    },
+                    (err) => {
+                        this.showError = err.message;
+                    });
+            }
+        },
     }
 </script>
 

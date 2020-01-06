@@ -2,13 +2,13 @@
     <v-container fill-height>
         <v-layout align-center>
             <v-card
+                    :key="product.name"
                     class="mx-auto"
                     max-width="400"
-                    v-bind:key="product.id"
                     v-for="product in products"
             >
                 <v-img
-                        :src="product.img"
+                        :src="product.image_url"
                         class="white--text align-end"
                         max-height="400"
                 >
@@ -30,12 +30,10 @@
                             text
                     >
                         <v-icon>shopping_cart</v-icon>
-                        Dodaj do koszyka
+                        Add to cart
                     </v-btn>
                 </v-card-actions>
             </v-card>
-
-
         </v-layout>
     </v-container>
 </template>
@@ -58,10 +56,9 @@
                         'brand': doc.data().brand,
                         'category': doc.data().category,
                         'description': doc.data().description,
-                        'img': doc.data().img,
+                        'image_url': doc.data().image_url,
                         'name': doc.data().name,
                         'price': doc.data().price,
-                        'product_id': doc.data().product_id
                     };
                     this.products.push(data)
                 })

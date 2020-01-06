@@ -130,7 +130,7 @@
 
                     <v-list-item
                             link
-                            to="/deleteProduct"
+                            to="/editProduct"
                     >
                         <v-list-item-icon>
                             <v-icon>edit</v-icon>
@@ -143,7 +143,7 @@
 
                     <v-list-item
                             link
-                            to="/removeProduct"
+                            to="/deleteProduct"
                     >
                         <v-list-item-icon>
                             <v-icon>delete</v-icon>
