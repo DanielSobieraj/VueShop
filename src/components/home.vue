@@ -13,7 +13,10 @@
                   justify-center="center"
                   style="height: auto;"
                   v-for="product in products">
-            <v-card>
+            <v-card
+                    height="500px"
+                    width="300px"
+            >
                 <v-img
                         :src="product.image_url"
                         class="white--text align-end"
@@ -25,7 +28,7 @@
                 <v-card-subtitle class="pb-0">{{ product.brand }}</v-card-subtitle>
                 <v-card-title class="py-0">{{ product.name }}</v-card-title>
                 <v-card-text class="text--primary">
-                    <div class="pb-1">{{ product.description }}</div>
+                    <div class="pb-1"></div>
                     <div>Price: {{ product.price }} zł</div>
                 </v-card-text>
 
@@ -52,7 +55,7 @@
             return {
                 products: [],
                 categoryProducts: ['Wax', 'Shampoo', 'Towel', 'Quick detailer', 'Bucket'],
-                categorySelect: ''
+                categorySelect: '',
             }
         },
         created() {
