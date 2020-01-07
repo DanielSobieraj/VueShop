@@ -1,5 +1,15 @@
 <template>
     <v-container fill-height>
+        <v-row justify="center">
+            <v-col>
+                <p class="mx-auto">Categories</p>
+                <v-select multiple
+                :items="product.category"
+                v-for="product in products"
+                :key="product.name">
+                </v-select>
+            </v-col>
+        </v-row>
         <v-layout align-center>
             <v-card
                     :key="product.name"
@@ -19,9 +29,8 @@
                 <v-card-text class="text--primary">
                     <div>{{ product.name }}</div>
 
-                    <div>{{ product.description }}</div>
-                    <br>
-                    <div>Cena: {{ product.price }} zł</div>
+                    <div class="pb-1">{{ product.description }}</div>
+                    <div>Price: {{ product.price }} zł</div>
                 </v-card-text>
 
                 <v-card-actions>
@@ -58,7 +67,7 @@
                         'description': doc.data().description,
                         'image_url': doc.data().image_url,
                         'name': doc.data().name,
-                        'price': doc.data().price,
+                        'price': doc.data().price
                     };
                     this.products.push(data)
                 })
