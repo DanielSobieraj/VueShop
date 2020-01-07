@@ -14,14 +14,13 @@
                   style="height: auto;"
                   v-for="product in products">
             <v-card
-                    height="500px"
-                    width="300px"
+                    width="400px"
             >
                 <v-img
                         :src="product.image_url"
                         class="white--text align-end"
-                        height="300px"
-                        width="300px"
+                        height="400px"
+                        width="400px"
                 >
                 </v-img>
 
