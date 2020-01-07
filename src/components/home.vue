@@ -2,33 +2,29 @@
     <v-container fill-height>
         <v-row justify="center">
             <v-col>
-                <p class="mx-auto">Categories</p>
-                <v-select multiple
-                :items="product.category"
-                v-for="product in products"
-                :key="product.name">
-                </v-select>
+                <v-select :items="categoryProducts"
+                          label="Sort by categories"
+                          multiple
+                          v-model="categorySelect"/>
             </v-col>
         </v-row>
-        <v-layout align-center>
-            <v-card
-                    :key="product.name"
-                    class="mx-auto"
-                    max-width="400"
-                    v-for="product in products"
-            >
+        <v-layout :key="product.name"
+                  class="my-5"
+                  justify-center="center"
+                  style="height: auto;"
+                  v-for="product in products">
+            <v-card>
                 <v-img
                         :src="product.image_url"
                         class="white--text align-end"
-                        max-height="400"
+                        height="300px"
+                        width="300px"
                 >
                 </v-img>
 
                 <v-card-subtitle class="pb-0">{{ product.brand }}</v-card-subtitle>
-
+                <v-card-title class="py-0">{{ product.name }}</v-card-title>
                 <v-card-text class="text--primary">
-                    <div>{{ product.name }}</div>
-
                     <div class="pb-1">{{ product.description }}</div>
                     <div>Price: {{ product.price }} zł</div>
                 </v-card-text>
@@ -54,7 +50,9 @@
         name: "home",
         data() {
             return {
-                products: []
+                products: [],
+                categoryProducts: ['Wax', 'Shampoo', 'Towel', 'Quick detailer', 'Bucket'],
+                categorySelect: ''
             }
         },
         created() {
@@ -72,7 +70,7 @@
                     this.products.push(data)
                 })
             })
-        }
+        },
     };
 </script>
 

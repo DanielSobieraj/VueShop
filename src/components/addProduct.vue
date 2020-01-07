@@ -108,7 +108,7 @@
         data() {
             return {
                 name: '',
-                brand: ['Soft99', 'Collinite', 'Shiny Garage'],
+                brand: ['Soft99', 'Collinite', 'Shiny Garage', 'K2'],
                 description: '',
                 price: null,
                 category: ['Wax', 'Shampoo', 'Towel', 'Quick detailer', 'Bucket'],
