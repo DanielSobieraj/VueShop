@@ -8,11 +8,13 @@
                           v-model="categorySelect"/>
             </v-col>
         </v-row>
+
         <v-layout :key="product.name"
                   class="my-5"
                   justify-center="center"
                   style="height: auto;"
                   v-for="product in products">
+            <v-lazy>
             <v-card
                     width="400px"
             >
@@ -41,6 +43,7 @@
                     </v-btn>
                 </v-card-actions>
             </v-card>
+        </v-lazy>
         </v-layout>
     </v-container>
 </template>
