@@ -108,10 +108,10 @@
         data() {
             return {
                 name: '',
-                brand: ['Soft99', 'Collinite', 'Shiny Garage', 'K2'],
+                brand: ['ADBL', 'Vikan', 'Work_Stuff', 'Monster_Shine', 'Madness', 'CarPRO', 'CARTEC', 'Shiny Garage', 'Angerlwax', 'Chemical Guys', 'Swissvax', 'Nielsen', 'GOOD Stuff', 'Soft99'],
                 description: '',
                 price: null,
-                category: ['Wax', 'Shampoo', 'Towel', 'Quick detailer', 'Bucket'],
+                category: ['Brush', 'Dryer', 'Glass', 'Shampoo', 'Sponge', 'Tires', 'Wax'],
                 image_url: '',
                 selectedCategory: '',
                 selectedBrand: '',
