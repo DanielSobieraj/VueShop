@@ -16,17 +16,22 @@
                 Product deleted
             </v-alert>
         </v-col>
-        <v-layout align-center>
+        <v-row>
+        <v-layout align-center
+                  :key="product.name"
+                  v-for="product in products"
+                  class="my-5">
             <v-card
-                    :key="product.name"
+
                     class="mx-auto"
-                    max-width="400"
-                    v-for="product in products"
+                    width="400px"
+
             >
                 <v-img
                         :src="product.image_url"
                         class="white--text align-end"
-                        max-height="400"
+                        height="400px"
+                        width="400px"
                 >
                 </v-img>
 
@@ -35,8 +40,6 @@
                 <v-card-text class="text--primary">
                     <div>{{ product.name }}</div>
 
-                    <div>{{ product.description }}</div>
-                    <br>
                     <div>Cena: {{ product.price }} zł</div>
                 </v-card-text>
 
@@ -52,6 +55,7 @@
                 </v-card-actions>
             </v-card>
         </v-layout>
+        </v-row>
     </v-container>
 </template>
 
