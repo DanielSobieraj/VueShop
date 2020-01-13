@@ -1,4 +1,5 @@
 # Projekt sklepu VueShop
+https://danielsobieraj.github.io/VueShop/
 
 ## Project setup
 ```
