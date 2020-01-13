@@ -108,7 +108,7 @@
         data() {
             return {
                 name: '',
-                brand: ['ADBL', 'Vikan', 'Work_Stuff', 'Monster_Shine', 'Madness', 'CarPRO', 'CARTEC', 'Shiny Garage', 'Angerlwax', 'Chemical Guys', 'Swissvax', 'Nielsen', 'GOOD Stuff', 'Soft99'],
+                brand: ['ADBL', 'Vikan', 'Work Stuff', 'Monster Shine', 'Madness', 'CarPRO', 'CARTEC', 'Shiny Garage', 'Angerlwax', 'Chemical Guys', 'Swissvax', 'Nielsen', 'GOOD Stuff', 'Soft99'],
                 description: '',
                 price: null,
                 category: ['Brush', 'Dryer', 'Glass', 'Shampoo', 'Sponge', 'Tires', 'Wax'],
