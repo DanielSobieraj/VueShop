@@ -1,5 +1,5 @@
 # Projekt sklepu VueShop
-https://danielsobieraj.github.io/VueShop/
+https://vueshop-pcz.herokuapp.com/
 
 ## Project setup
 ```
