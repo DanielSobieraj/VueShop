@@ -53,7 +53,7 @@
         data() {
             return {
                 products: [],
-                categoryProducts: ['Wax', 'Shampoo', 'Towel', 'Quick detailer', 'Bucket'],
+                categoryProducts: ['Brush', 'Dryer', 'Glass', 'Shampoo', 'Sponge', 'Tires', 'Wax'],
                 categorySelect: '',
             }
         },
