@@ -1,6 +1,6 @@
 <template>
-    <div class="">
-        <v-toolbar>
+    <div class="mb-10">
+        <v-app-bar fixed>
             <v-spacer/>
 
             <v-toolbar-items>
@@ -51,7 +51,7 @@
             </v-toolbar-items>
 
             <v-spacer/>
-        </v-toolbar>
+        </v-app-bar>
 
         <v-sheet
         >
