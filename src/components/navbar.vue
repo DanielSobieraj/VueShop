@@ -29,6 +29,7 @@
             <v-toolbar-items>
                 <v-btn @click.stop="searchIcon = !searchIcon"
                        text
+                       to="/search"
                 >
                     <i class="material-icons">
                         search
@@ -103,6 +104,7 @@
 
                     <v-list-item
                             link
+                            to="/search"
                     >
                         <v-list-item-icon>
                             <v-icon>search</v-icon>
@@ -110,47 +112,6 @@
 
                         <v-list-item-content>
                             <v-list-item-title>Search</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-
-                    <v-divider></v-divider>
-
-                    <v-list-item
-                            link
-                            to="/addProduct"
-                    >
-                        <v-list-item-icon>
-                            <v-icon>add</v-icon>
-                        </v-list-item-icon>
-
-                        <v-list-item-content>
-                            <v-list-item-title>Add product</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-
-                    <v-list-item
-                            link
-                            to="/editProduct"
-                    >
-                        <v-list-item-icon>
-                            <v-icon>edit</v-icon>
-                        </v-list-item-icon>
-
-                        <v-list-item-content>
-                            <v-list-item-title>Edit product</v-list-item-title>
-                        </v-list-item-content>
-                    </v-list-item>
-
-                    <v-list-item
-                            link
-                            to="/deleteProduct"
-                    >
-                        <v-list-item-icon>
-                            <v-icon>delete</v-icon>
-                        </v-list-item-icon>
-
-                        <v-list-item-content>
-                            <v-list-item-title>Delete product</v-list-item-title>
                         </v-list-item-content>
                     </v-list-item>
 

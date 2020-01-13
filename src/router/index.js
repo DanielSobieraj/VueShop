@@ -8,6 +8,9 @@ import addProduct from "../components/addProduct";
 import editProduct from "../components/editProduct";
 import deleteProduct from "../components/deleteProduct";
 
+import crud from "../components/crud";
+import search from "../components/search";
+
 Vue.use(Router);
 
 const router = new Router({
@@ -37,6 +40,11 @@ const router = new Router({
       component: register
     },
     {
+      path: "/crud",
+      name: "crud",
+      component: crud
+    },
+    {
       path: "/addproduct",
       name: "addProduct",
       component: addProduct
@@ -50,6 +58,11 @@ const router = new Router({
       path: "/deleteProduct",
       name: "deleteProduct",
       component: deleteProduct
+    },
+    {
+      path: "/search",
+      name: "search",
+      component: search
     }
   ]
 });

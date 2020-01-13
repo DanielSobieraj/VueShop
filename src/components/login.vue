@@ -55,7 +55,7 @@
                     .auth()
                     .signInWithEmailAndPassword(this.email, this.password).then(
                     () => {
-                        this.$router.replace('home')
+                        this.$router.replace('crud')
                     },
                     (err) => {
                         alert('Błąd. ' + err.message)
